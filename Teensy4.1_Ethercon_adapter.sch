@@ -1,0 +1,310 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Teensy 4.1 Ethercon adapter"
+Date "2021-01-28"
+Rev "1.0"
+Comp "Tom Magnier"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 604DDFF5
+P 3700 3100
+F 0 "J1" H 3618 3517 50  0000 C CNN
+F 1 "Conn_01x06" H 3618 3426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3700 3100 50  0001 C CNN
+F 3 "~" H 3700 3100 50  0001 C CNN
+	1    3700 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 604DFB3F
+P 5650 3850
+F 0 "C1" H 5742 3896 50  0000 L CNN
+F 1 "0.1uF/50V" H 5742 3805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5650 3850 50  0001 C CNN
+F 3 "~" H 5650 3850 50  0001 C CNN
+	1    5650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:RJ45_Shielded J2
+U 1 1 604E8305
+P 9800 3200
+F 0 "J2" H 9470 3147 50  0000 R CNN
+F 1 "NE8FAV" H 9470 3238 50  0000 R CNN
+F 2 "tom_kicad_lib:Neutrik_EtherCON_NE8FAV_1x8P_GND_Female_Vertical" V 9800 3225 50  0001 C CNN
+F 3 "~" V 9800 3225 50  0001 C CNN
+	1    9800 3200
+	-1   0    0    1   
+$EndComp
+Text Label 4200 2900 2    50   ~ 0
+TX+
+Text Label 4200 3000 2    50   ~ 0
+TX-
+Text Label 4200 3100 2    50   ~ 0
+GND
+Text Label 4200 3200 2    50   ~ 0
+LED
+Text Label 4200 3300 2    50   ~ 0
+RX-
+Text Label 4200 3400 2    50   ~ 0
+RX+
+$Comp
+L Device:LED D1
+U 1 1 604EF16F
+P 4650 3800
+F 0 "D1" V 4689 3682 50  0000 R CNN
+F 1 "LED" V 4598 3682 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric" H 4650 3800 50  0001 C CNN
+F 3 "~" H 4650 3800 50  0001 C CNN
+	1    4650 3800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 3200 4650 3650
+Wire Wire Line
+	3900 3200 4650 3200
+Wire Wire Line
+	4500 3100 4500 4050
+Wire Wire Line
+	4500 4050 4650 4050
+Wire Wire Line
+	4650 4050 4650 3950
+Wire Wire Line
+	3900 3100 4500 3100
+$Comp
+L power:GND #PWR0101
+U 1 1 604F3312
+P 4650 4150
+F 0 "#PWR0101" H 4650 3900 50  0001 C CNN
+F 1 "GND" H 4655 3977 50  0000 C CNN
+F 2 "" H 4650 4150 50  0001 C CNN
+F 3 "" H 4650 4150 50  0001 C CNN
+	1    4650 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 4150 4650 4050
+Connection ~ 4650 4050
+Wire Wire Line
+	3900 2900 5900 2900
+Wire Wire Line
+	5300 3000 5300 3100
+Wire Wire Line
+	5300 3100 5900 3100
+Wire Wire Line
+	3900 3000 5300 3000
+Wire Wire Line
+	5900 3000 5650 3000
+Wire Wire Line
+	5650 3000 5650 3400
+Wire Wire Line
+	5300 3300 5300 3500
+Wire Wire Line
+	5300 3500 5900 3500
+Wire Wire Line
+	3900 3300 5300 3300
+Wire Wire Line
+	5400 3400 5400 3300
+Wire Wire Line
+	5400 3300 5900 3300
+Wire Wire Line
+	3900 3400 5400 3400
+Wire Wire Line
+	5900 3400 5650 3400
+Connection ~ 5650 3400
+Wire Wire Line
+	5650 3400 5650 3750
+$Comp
+L power:GND #PWR0102
+U 1 1 604FA55A
+P 5650 4150
+F 0 "#PWR0102" H 5650 3900 50  0001 C CNN
+F 1 "GND" H 5655 3977 50  0000 C CNN
+F 2 "" H 5650 4150 50  0001 C CNN
+F 3 "" H 5650 4150 50  0001 C CNN
+	1    5650 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4150 5650 3950
+Wire Wire Line
+	6700 3100 7400 3100
+Wire Wire Line
+	6700 3300 7450 3300
+Wire Wire Line
+	6700 2900 9400 2900
+Wire Wire Line
+	9400 3000 7400 3000
+Wire Wire Line
+	7400 3000 7400 3100
+Wire Wire Line
+	9400 3100 7450 3100
+Wire Wire Line
+	7450 3100 7450 3300
+Wire Wire Line
+	6700 3500 7550 3500
+Wire Wire Line
+	7550 3500 7550 3400
+Wire Wire Line
+	7550 3400 9400 3400
+$Comp
+L Device:R_Small R3
+U 1 1 6050B177
+P 9050 3250
+F 0 "R3" V 8854 3250 50  0000 C CNN
+F 1 "75R" V 8945 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 9050 3250 50  0001 C CNN
+F 3 "~" H 9050 3250 50  0001 C CNN
+	1    9050 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9400 3200 9250 3200
+Wire Wire Line
+	9250 3200 9250 3250
+Wire Wire Line
+	9250 3250 9150 3250
+Wire Wire Line
+	9250 3250 9250 3300
+Wire Wire Line
+	9250 3300 9400 3300
+Connection ~ 9250 3250
+$Comp
+L Device:R_Small R4
+U 1 1 60513CFD
+P 9050 3550
+F 0 "R4" V 8854 3550 50  0000 C CNN
+F 1 "75R" V 8945 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 9050 3550 50  0001 C CNN
+F 3 "~" H 9050 3550 50  0001 C CNN
+	1    9050 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9400 3500 9250 3500
+Wire Wire Line
+	9250 3500 9250 3550
+Wire Wire Line
+	9250 3550 9150 3550
+Wire Wire Line
+	9250 3550 9250 3600
+Wire Wire Line
+	9250 3600 9400 3600
+Connection ~ 9250 3550
+$Comp
+L Device:R_Small R1
+U 1 1 605155B2
+P 8550 3250
+F 0 "R1" V 8354 3250 50  0000 C CNN
+F 1 "75R" V 8445 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 8550 3250 50  0001 C CNN
+F 3 "~" H 8550 3250 50  0001 C CNN
+	1    8550 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 60515A93
+P 8550 3550
+F 0 "R2" V 8354 3550 50  0000 C CNN
+F 1 "75R" V 8445 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 8550 3550 50  0001 C CNN
+F 3 "~" H 8550 3550 50  0001 C CNN
+	1    8550 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6700 3000 7200 3000
+Wire Wire Line
+	7200 3000 7200 3250
+Wire Wire Line
+	7200 3250 8450 3250
+Wire Wire Line
+	6700 3400 7200 3400
+Wire Wire Line
+	7200 3400 7200 3550
+Wire Wire Line
+	7200 3550 8450 3550
+Wire Wire Line
+	8650 3250 8800 3250
+Wire Wire Line
+	8650 3550 8800 3550
+Wire Wire Line
+	8800 3250 8800 3550
+Connection ~ 8800 3250
+Wire Wire Line
+	8800 3250 8950 3250
+Connection ~ 8800 3550
+Wire Wire Line
+	8800 3550 8950 3550
+$Comp
+L Device:C_Small C2
+U 1 1 6051B278
+P 8800 3950
+F 0 "C2" H 8892 3996 50  0000 L CNN
+F 1 "1000pF/2kV" H 8892 3905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8800 3950 50  0001 C CNN
+F 3 "~" H 8800 3950 50  0001 C CNN
+	1    8800 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3550 8800 3850
+$Comp
+L power:GND #PWR0103
+U 1 1 6051E6E5
+P 9950 2500
+F 0 "#PWR0103" H 9950 2250 50  0001 C CNN
+F 1 "GND" H 9955 2327 50  0000 C CNN
+F 2 "" H 9950 2500 50  0001 C CNN
+F 3 "" H 9950 2500 50  0001 C CNN
+	1    9950 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 2500 9950 2400
+Wire Wire Line
+	9950 2400 9800 2400
+Wire Wire Line
+	9800 2400 9800 2700
+$Comp
+L power:GND #PWR0104
+U 1 1 6051FE15
+P 8800 4050
+F 0 "#PWR0104" H 8800 3800 50  0001 C CNN
+F 1 "GND" H 8805 3877 50  0000 C CNN
+F 2 "" H 8800 4050 50  0001 C CNN
+F 3 "" H 8800 4050 50  0001 C CNN
+	1    8800 4050
+	1    0    0    -1  
+$EndComp
+Text Label 6800 2900 0    50   ~ 0
+T+
+Text Label 6800 3100 0    50   ~ 0
+T-
+Text Label 6800 3300 0    50   ~ 0
+R+
+Text Label 6800 3500 0    50   ~ 0
+R-
+$Comp
+L Transformer:PT61017PEL TR1
+U 1 1 604E3B92
+P 6300 3200
+F 0 "TR1" H 6300 3742 50  0000 C CNN
+F 1 "PT61017PEL" H 6300 3651 50  0000 C CNN
+F 2 "Transformer_SMD:Transformer_Ethernet_Bourns_PT61017PEL" H 6300 2700 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/Product-Datasheets/PT61017PEL.pdf" H 5600 3550 50  0001 C CNN
+	1    6300 3200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

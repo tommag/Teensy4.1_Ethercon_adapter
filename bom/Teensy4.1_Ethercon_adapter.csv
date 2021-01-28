@@ -1,0 +1,8 @@
+"Id";"Référence";"Boîtier";"Quantité";"Désignation";"Fournisseur et réf";
+1;"D1";"LED_1206_3216Metric";1;"LED";;;
+2;"C1";"C_0805_2012Metric";1;"0.1uF/50V";;;
+3;"R4,R3,R2,R1";"R_0805_2012Metric";4;"75R";;;
+4;"C2";"C_0805_2012Metric";1;"1000pF/2kV";;;
+5;"J2";"Neutrik_EtherCON_NE8FAV_1x8P_GND_Female_Vertical";1;"NE8FAV";;;
+6;"TR1";"Transformer_Ethernet_Bourns_PT61017PEL";1;"PT61017PEL";;;
+7;"J1";"PinHeader_2x03_P2.54mm_Vertical";1;"Conn_01x06";;;
