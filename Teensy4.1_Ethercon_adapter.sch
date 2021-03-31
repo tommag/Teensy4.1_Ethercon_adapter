@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Teensy 4.1 Ethercon adapter"
-Date "2021-01-28"
-Rev "1.0"
+Date "2021-03-17"
+Rev "1.1"
 Comp "Tom Magnier"
 Comment1 ""
 Comment2 ""
@@ -19,7 +19,7 @@ U 1 1 604DDFF5
 P 3700 3100
 F 0 "J1" H 3618 3517 50  0000 C CNN
 F 1 "Conn_01x06" H 3618 3426 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3700 3100 50  0001 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_2x03_P2.00mm_Vertical" H 3700 3100 50  0001 C CNN
 F 3 "~" H 3700 3100 50  0001 C CNN
 	1    3700 3100
 	-1   0    0    -1  
@@ -260,34 +260,12 @@ F 3 "~" H 8800 3950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8800 3550 8800 3850
-$Comp
-L power:GND #PWR0103
-U 1 1 6051E6E5
-P 9950 2500
-F 0 "#PWR0103" H 9950 2250 50  0001 C CNN
-F 1 "GND" H 9955 2327 50  0000 C CNN
-F 2 "" H 9950 2500 50  0001 C CNN
-F 3 "" H 9950 2500 50  0001 C CNN
-	1    9950 2500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9950 2500 9950 2400
 Wire Wire Line
 	9950 2400 9800 2400
 Wire Wire Line
 	9800 2400 9800 2700
-$Comp
-L power:GND #PWR0104
-U 1 1 6051FE15
-P 8800 4050
-F 0 "#PWR0104" H 8800 3800 50  0001 C CNN
-F 1 "GND" H 8805 3877 50  0000 C CNN
-F 2 "" H 8800 4050 50  0001 C CNN
-F 3 "" H 8800 4050 50  0001 C CNN
-	1    8800 4050
-	1    0    0    -1  
-$EndComp
 Text Label 6800 2900 0    50   ~ 0
 T+
 Text Label 6800 3100 0    50   ~ 0
@@ -307,4 +285,90 @@ F 3 "https://www.bourns.com/docs/Product-Datasheets/PT61017PEL.pdf" H 5600 3550 
 	1    6300 3200
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GNDREF #PWR03
+U 1 1 60523364
+P 8800 4050
+F 0 "#PWR03" H 8800 3800 50  0001 C CNN
+F 1 "GNDREF" H 8805 3877 50  0000 C CNN
+F 2 "" H 8800 4050 50  0001 C CNN
+F 3 "" H 8800 4050 50  0001 C CNN
+	1    8800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR04
+U 1 1 60526B84
+P 9950 2500
+F 0 "#PWR04" H 9950 2250 50  0001 C CNN
+F 1 "GNDREF" H 9955 2327 50  0000 C CNN
+F 2 "" H 9950 2500 50  0001 C CNN
+F 3 "" H 9950 2500 50  0001 C CNN
+	1    9950 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 6052AE76
+P 7200 4300
+F 0 "R5" V 7004 4300 50  0000 C CNN
+F 1 "DNP" V 7095 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7200 4300 50  0001 C CNN
+F 3 "~" H 7200 4300 50  0001 C CNN
+	1    7200 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Net-Tie_2 NT1
+U 1 1 6052BD96
+P 7200 4600
+F 0 "NT1" H 7200 4781 50  0000 C CNN
+F 1 "Net-Tie_2" H 7200 4690 50  0000 C CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 7200 4600 50  0001 C CNN
+F 3 "~" H 7200 4600 50  0001 C CNN
+	1    7200 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR02
+U 1 1 6052C72B
+P 7500 4700
+F 0 "#PWR02" H 7500 4450 50  0001 C CNN
+F 1 "GNDREF" H 7505 4527 50  0000 C CNN
+F 2 "" H 7500 4700 50  0001 C CNN
+F 3 "" H 7500 4700 50  0001 C CNN
+	1    7500 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4700 7500 4600
+Wire Wire Line
+	7500 4600 7300 4600
+Wire Wire Line
+	7500 4600 7500 4300
+Wire Wire Line
+	7500 4300 7300 4300
+Connection ~ 7500 4600
+$Comp
+L power:GND #PWR01
+U 1 1 6052F266
+P 6850 4700
+F 0 "#PWR01" H 6850 4450 50  0001 C CNN
+F 1 "GND" H 6855 4527 50  0000 C CNN
+F 2 "" H 6850 4700 50  0001 C CNN
+F 3 "" H 6850 4700 50  0001 C CNN
+	1    6850 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4700 6850 4600
+Wire Wire Line
+	6850 4600 7100 4600
+Wire Wire Line
+	6850 4600 6850 4300
+Wire Wire Line
+	6850 4300 7100 4300
+Connection ~ 6850 4600
+Text Notes 5900 5400 0    50   ~ 0
+Chassis ground :\nby default chassis ground and system ground are tied together.\nIf necessary, you can cut NT1 open and populate a resistor or \ncapacitor on the R5 footprint
 $EndSCHEMATC

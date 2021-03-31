@@ -7,7 +7,7 @@
       "Application": "Pcbnew",
       "Version":     "5.1.9"
     },
-    "CreationDate":  "2021-01-28T17:40:55+01:00"
+    "CreationDate":  "2021-03-17T16:28:07+01:00"
   },
   "GeneralSpecs":
   {
@@ -15,7 +15,7 @@
     {
       "Name": "Teensy4.1_Ethercon_adapter",
       "GUID": "5465656e-7379-4342-9e31-5f4574686572",
-      "Revision": "1.0"
+      "Revision": "1.1"
     },
     "Size":
     {
@@ -32,7 +32,9 @@
       "PadToPad":  0.200,
       "PadToTrack":  0.200,
       "TrackToTrack":  0.200,
-      "MinLineWidth":  0.200
+      "MinLineWidth":  0.200,
+      "TrackToRegion":  0.250,
+      "RegionToRegion":  0.250
     }
   ],
   "FilesAttributes":
@@ -50,11 +52,6 @@
     {
       "Path":  "Teensy4.1_Ethercon_adapter-F_Paste.gtp",
       "FileFunction":  "SolderPaste,Top",
-      "FilePolarity":  "Positive"
-    },
-    {
-      "Path":  "Teensy4.1_Ethercon_adapter-B_Paste.gbp",
-      "FileFunction":  "SolderPaste,Bot",
       "FilePolarity":  "Positive"
     },
     {
@@ -113,10 +110,6 @@
     {
       "Type":  "SolderMask",
       "Notes":  "Layer B.Mask"
-    },
-    {
-      "Type":  "SolderPaste",
-      "Notes":  "Layer B.Paste"
     },
     {
       "Type":  "Legend",
